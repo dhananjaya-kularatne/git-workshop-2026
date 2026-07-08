@@ -25,7 +25,8 @@ function register(username, password) {
   }
 
   if (!isValidPassword(password)) {
-    return { success: false, message: "Password must be at least 8 characters" };
+    // Branch: feature/add-password-hints
+    return { success: false, message: "Password too short — use at least 8 characters" };
   }
 
   if (users.has(normalized)) {
@@ -35,7 +36,7 @@ function register(username, password) {
   // Demo only: store password as-is. Never do this in production.
   users.set(normalized, password);
 
-  return { success: true, message: "Registration successful" };
+  return { success: true, message: "Account registered successfully. You can now log in." };
 }
 
 /**
