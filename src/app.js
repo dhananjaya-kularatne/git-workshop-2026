@@ -25,6 +25,9 @@ function runDemo() {
   console.log("Bad login:", badLogin.message);
 }
 
+//just adding a comment to commit
+
+
 // Only run the demo when executed directly (not when imported by tests)
 if (require.main === module) {
   runDemo();
